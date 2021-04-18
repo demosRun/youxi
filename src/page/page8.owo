@@ -1,0 +1,185 @@
+<template lang="pug">
+.page8
+  .so.so-0
+    img.so.so-1(src="@|3-11-3.png|")
+    img.so.so-4(src="@|3-8-3.png|")
+    img.so.so-5(src="@|3-7.png|")
+    img.so.so-8(src="@|3-4-2.png|")
+    img.so.so-9(src="@|3-3.jpg|")
+    .xuanxiang-box.clear
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .xuanxiang(o-tap="select")
+        img.so.xuanxiang-show.dui(src="@|3-6.png|")
+        img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+</template>
+<script>
+module.exports = {
+  select: function () {
+    this.$target.classList.add('ok')
+    setTimeout(() => {
+      owo.go('page6//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+    }, 1000);
+  },
+  select2: function () {
+    this.$target.classList.add('error')
+  },
+}
+</script>
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 195px;
+  top: 550px;
+  z-index: -1;
+}
+.so-2 {
+  left: 403px;
+  top: 976px;
+  z-index: -2;
+}
+.so-3 {
+  left: 130px;
+  top: 976px;
+  z-index: -3;
+}
+.so-4 {
+  left: 132px;
+  top: 315px;
+  z-index: -4;
+}
+.so-5 {
+  left: 0px;
+  top: 5px;
+  z-index: -5;
+}
+.so-6 {
+  left: 209px;
+  top: 1123px;
+  z-index: -6;
+}
+.so-7 {
+  left: 490px;
+  top: 1123px;
+  z-index: -7;
+}
+.so-8 {
+  left: 0px;
+  top: 246px;
+  z-index: -8;
+}
+.so-9 {
+  left: 0px;
+  top: 0px;
+  z-index: -9;
+}
+.xuanxiang {
+  background-image: url('@|mi.png|');
+  width: 140px;
+  height: 120px;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: 90px;
+  background-position: center;
+  position: relative;
+  .xuanxiang-show {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -12px;
+    display: none;
+  }
+}
+.xuanxiang.ok .dui {
+  display: block;
+}
+.xuanxiang.error {
+  background-image: url('@|3-10.png|');
+  .cuo {
+    display: block;
+  }
+}
+.mi-box {
+  position: absolute;
+  display: flex;
+  width: 565px;
+  left: 0;
+  right: -34px;
+  margin: auto;
+  top: 600px;
+  .item {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.mi {
+  background-image: url('@|mi.png|');
+  width: 166px;
+  height: 166px;
+  margin: 0 10px;
+}
+.kuohao {
+  background-image: url('@|kuohao.png|');
+  width: 166px;
+  height: 166px;
+  margin: 0 10px;
+}
+.xuanxiang-box {
+  position: absolute;
+  left: 46px;
+  right: 0;
+  width: 560px;
+  margin: auto;
+  top: 680px;
+}
+</style>

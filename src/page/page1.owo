@@ -1,0 +1,116 @@
+<template lang="pug">
+.page1
+  .so.so-0
+    img.so.so-1(src="@|23.png|")
+    img.so.so-2(src="@|21.png|")
+    .so.so-3
+        img.so.so-4(src="@|18.png|")
+        img.so.so-5(src="@|17.png|")
+        img.so.so-6(src="@|16.png|")
+        img.so.so-7(src="@|15.png|" o-animation="shrink" go="page2//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn")
+        img.so.so-8(src="@|14.png|")
+        img.so.so-9(src="@|13.png|")
+        img.so.so-10(src="@|11.png|")
+        img.so.so-11(src="@|9.png|")
+        img.so.so-12(src="@|7.png|")
+    img.so.so-13(src="@|5.png|")
+    img.so.so-14(src="@|4.png|")
+    img.so.so-15(src="@|3.jpg|")
+</template>
+<script>
+module.exports = {
+}
+</script>
+<style lang="less">
+.so {
+  position: absolute;
+}
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 0px;
+  top: 5px;
+  z-index: -1;
+}
+.so-2 {
+  left: 88px;
+  top: 285px;
+  z-index: -2;
+}
+.so-3 {
+  left: 0px;
+  top: 242px;
+  width: 666px;
+  height: 1009px;
+  z-index: -3;;
+}
+.so-4 {
+  left: 536px;
+  top: 189px;
+  z-index: -4;
+}
+.so-5 {
+  left: 240px;
+  top: 136px;
+  z-index: -5;
+}
+.so-6 {
+  left: 462px;
+  top: 750px;
+  z-index: -6;
+}
+.so-7 {
+  left: 176px;
+  top: 642px;
+  z-index: -7;
+}
+.so-8 {
+  left: 141px;
+  top: 252px;
+  z-index: -8;
+}
+.so-9 {
+  left: 132px;
+  top: 688px;
+  z-index: -9;
+}
+.so-10 {
+  left: 376px;
+  top: 590px;
+  z-index: -10;
+}
+.so-11 {
+  left: 578px;
+  top: 788px;
+  z-index: -11;
+}
+.so-12 {
+  left: 0px;
+  top: 0px;
+  z-index: -12;
+}
+.so-13 {
+  left: 536px;
+  top: 200px;
+  z-index: -13;
+}
+.so-14 {
+  left: 131px;
+  top: 146px;
+  z-index: -14;
+}
+.so-15 {
+  left: 0px;
+  top: 0px;
+  z-index: -15;
+}
+.so-1 {
+  user-select: none;
+  pointer-events: none;
+}
+</style>

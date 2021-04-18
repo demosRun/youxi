@@ -1,0 +1,234 @@
+<template lang="pug">
+.page3
+  .so.so-0
+    img.so.so-1(src="@|3-11.png|")
+    img.so.so-4(src="@|3-8.png|")
+    img.so.so-5(src="@|3-7.png|")
+    img.so.so-8(src="@|3-4.png|")
+    img.so.so-9(src="@|3-3.jpg|")
+    .guanqia 1/15
+    //- 时间盒子
+    .xin-box.clear
+      .xin
+      .xin
+      .xin
+      .xin
+      .xin
+      .xin
+    //- 分数
+    .code 0/100
+    .xuanxiang.xuanxiang-1(o-tap="selectItem(0)" o-animation="shrink")
+      img.so.xuanxiang-show.dui(src="@|3-6.png|")
+      img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .text
+    .xuanxiang.xuanxiang-2(o-tap="selectItem(1)" o-animation="shrink")
+      img.so.xuanxiang-show.dui(src="@|3-6.png|")
+      img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .text
+    .text-box.text-box-1
+    .text-box.text-box-2
+</template>
+<script>
+module.exports = {
+  data: {
+    activeIndexList: [],
+    activeIndex: 0,
+    code: 0,
+  },
+  select1: function () {
+    this.$target.classList.add('ok')
+    setTimeout(() => {
+      owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+    }, 1000);
+  },
+  select2: function () {
+    this.$target.classList.add('error')
+  },
+  selectItem: function (ind) {
+    const timu = tiku1[this.data.activeIndex]
+    if (ind == timu.right) {
+      this.$target.classList.add('ok')
+      code += 6
+    } else {
+      this.$target.classList.add('error')
+      xin --
+    }
+    this.jiesuan()
+    this.$el.classList.add('selectd')
+    setTimeout(() => {
+      this.next()
+    }, 2000);
+  },
+  next: function () {
+    if (rand > 5) {
+      setTimeout(() => {
+        owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+      }, 1000);
+      return
+    }
+    rand ++
+    const num = randomNum(0, tiku1.length)
+    if (this.data.activeIndexList.includes(num)) {
+      this.next()
+    } else {
+      this.data.activeIndexList.push(num)
+      this.$el.classList.remove('selectd')
+      this.getTimu(num)
+    }
+    this.queryAll('.xuanxiang').forEach(element => {
+      element.classList.remove('ok')
+      element.classList.remove('error')
+    });
+    this.query('.guanqia').innerText = `${rand}/15`
+  },
+  created: function () {
+    this.next()
+  },
+  getTimu: function (key) {
+    const timu = tiku1[key]
+    console.log(timu)
+    this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0]
+    this.query('.xuanxiang-2 .text').innerText = timu['pinyin'][1]
+    this.query('.text-box-1').innerText = timu['text'][0]
+    this.query('.text-box-2').innerText = timu['text'][1]
+    if (timu.show == 0) {
+      this.query('.text-box-1').classList.add('active')
+      this.query('.text-box-2').classList.remove('active')
+    } else {
+      this.query('.text-box-2').classList.add('active')
+      this.query('.text-box-1').classList.remove('active')
+    }
+  },
+  jiesuan: function () {
+    for (let index = 0; index < this.queryAll('.xin').length; index++) {
+      const element = this.queryAll('.xin')[index];
+      if (index < xin) {
+        element.classList.remove('close')
+      } else {
+        element.classList.add('close')
+      }
+    }
+    this.query('.code').innerText = `${code}/100`
+  }
+}
+</script>
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 195px;
+  top: 849px;
+  z-index: -1;
+}
+.so-2 {
+  left: 403px;
+  top: 976px;
+  z-index: -2;
+}
+.so-3 {
+  left: 130px;
+  top: 976px;
+  z-index: -3;
+}
+.so-4 {
+  left: 132px;
+  top: 315px;
+  z-index: -4;
+}
+.so-5 {
+  left: 0px;
+  top: 5px;
+  z-index: -5;
+}
+.so-6 {
+  left: 209px;
+  top: 1123px;
+  z-index: -6;
+}
+.so-7 {
+  left: 490px;
+  top: 1123px;
+  z-index: -7;
+}
+.so-8 {
+  left: 0px;
+  top: 246px;
+  z-index: -8;
+}
+.so-9 {
+  left: 0px;
+  top: 0px;
+  z-index: -9;
+}
+.xuanxiang {
+  background-image: url('@|3-9.png|');
+  width: 240px;
+  height: 156px;
+  position: absolute;
+  top: 975px;
+  background-repeat: no-repeat;
+  .xuanxiang-show {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -63px;
+    display: none;
+  }
+  .text {
+    line-height: 140px;
+    font-size: 60px;
+    text-align: center;
+    color: #298383;
+    pointer-events: none;
+  }
+}
+.xuanxiang-1 {
+  left: 127px;
+}
+.xuanxiang-2 {
+  left: 400px;
+}
+.xuanxiang.ok .dui {
+  display: block;
+}
+.xuanxiang.error {
+  background-image: url('@|3-10.png|');
+  color: #564f4f;
+  .cuo {
+    display: block;
+  }
+}
+.text-box-1 {
+  position: absolute;
+  left: 160px;
+  right: 0;
+  top: 573px;
+  width: 206px;
+  height: 206px;
+  font-size: 128px;
+  text-align: center;
+  line-height: 206px;
+  color: #046d6d;
+}
+.text-box-2 {
+  position: absolute;
+  left: 387px;
+  right: 0;
+  top: 573px;
+  width: 206px;
+  height: 206px;
+  font-size: 128px;
+  text-align: center;
+  line-height: 206px;
+  color: #046d6d;
+}
+.text-box.active {
+  color: #fc7680;
+}
+</style>

@@ -1,0 +1,47 @@
+<template lang="pug">
+.page4
+  .so.so-0
+    img.so.so-1(src="@|4-7.png|")
+    img.so.so-2(src="@|4-5.png|")
+    img.so.so-3(src="@|4-4.png|")
+    img.so.so-4(src="@|4-3.jpg|")
+</template>
+<script>
+module.exports = {
+  created: function () {
+    owo.animate('bounceInDown', this.query('.so-2'))
+    setTimeout(() => {
+      owo.go('page7//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+    }, 2000);
+  }
+}
+</script>
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 0px;
+  top: 5px;
+  z-index: -1;
+}
+.so-2 {
+  left: 139px;
+  top: 314px;
+  z-index: -2;
+}
+.so-3 {
+  left: 83px;
+  top: 375px;
+  z-index: -3;
+}
+.so-4 {
+  left: 0px;
+  top: 0px;
+  z-index: -4;
+}
+</style>

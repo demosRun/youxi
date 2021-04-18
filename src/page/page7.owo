@@ -1,0 +1,208 @@
+<template lang="pug">
+.page7
+  .so.so-0
+    img.so.so-1(src="@|3-11-2.png|")
+    img.so.so-4(src="@|3-8-2.png|")
+    img.so.so-5(src="@|3-7.png|")
+    img.so.so-8(src="@|3-4-2.png|")
+    img.so.so-9(src="@|3-3.jpg|")
+    .guanqia 1/15
+    //- 时间盒子
+    .xin-box.clear
+      .xin
+      .xin
+      .xin
+      .xin
+      .xin
+      .xin
+    //- 分数
+    .code 0/100
+    .mi-box
+      .item.mi
+      .item.mi
+      .item.kuohao
+    .xuanxiang.xuanxiang-1(o-tap="select1")
+      img.so.xuanxiang-show.dui(src="@|3-6.png|")
+      img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+    .xuanxiang.xuanxiang-2(o-tap="select2")
+      img.so.xuanxiang-show.dui(src="@|3-6.png|")
+      img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+</template>
+<script>
+module.exports = {
+  select1: function () {
+    this.$target.classList.add('ok')
+    setTimeout(() => {
+      owo.go('page5//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+    }, 1000);
+  },
+  select2: function () {
+    this.$target.classList.add('error')
+  },
+  data: {
+    activeIndexList: [],
+    activeIndex: 0,
+    code: 0,
+  },
+  next: function () {
+    for (let index = 0; index < this.queryAll('.xin').length; index++) {
+      const element = this.queryAll('.xin')[index];
+      if (index < xin) {
+        element.classList.remove('close')
+      } else {
+        element.classList.add('close')
+      }
+    }
+    this.query('.code').innerText = `${code}/100`
+    if (rand > 10) {
+      setTimeout(() => {
+        owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+      }, 1000);
+      return
+    }
+    rand ++
+    const num = randomNum(0, tiku1.length)
+    if (this.data.activeIndexList.includes(num)) {
+      this.next()
+    } else {
+      this.data.activeIndexList.push(num)
+      this.$el.classList.remove('selectd')
+      this.getTimu(num)
+    }
+    this.queryAll('.xuanxiang').forEach(element => {
+      element.classList.remove('ok')
+      element.classList.remove('error')
+    });
+    this.query('.guanqia').innerText = `${rand}/15`
+  },
+  getTimu: function (key) {
+    const timu = tiku1[key]
+    console.log(timu)
+    this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0]
+    this.query('.xuanxiang-2 .text').innerText = timu['pinyin'][1]
+    this.query('.text-box-1').innerText = timu['text'][0]
+    this.query('.text-box-2').innerText = timu['text'][1]
+    if (timu.show == 0) {
+      this.query('.text-box-1').classList.add('active')
+      this.query('.text-box-2').classList.remove('active')
+    } else {
+      this.query('.text-box-2').classList.add('active')
+      this.query('.text-box-1').classList.remove('active')
+    }
+  },
+  created: function () {
+    rand = 5
+    this.next()
+  },
+}
+</script>
+<style lang="less">
+.so-0 {
+  left: 0px;
+  top: 0px;
+  width: 750px;
+  height: 1508px;
+  z-index: 0;;
+}
+.so-1 {
+  left: 195px;
+  top: 849px;
+  z-index: -1;
+}
+.so-2 {
+  left: 403px;
+  top: 976px;
+  z-index: -2;
+}
+.so-3 {
+  left: 130px;
+  top: 976px;
+  z-index: -3;
+}
+.so-4 {
+  left: 132px;
+  top: 315px;
+  z-index: -4;
+}
+.so-5 {
+  left: 0px;
+  top: 5px;
+  z-index: -5;
+}
+.so-6 {
+  left: 209px;
+  top: 1123px;
+  z-index: -6;
+}
+.so-7 {
+  left: 490px;
+  top: 1123px;
+  z-index: -7;
+}
+.so-8 {
+  left: 0px;
+  top: 246px;
+  z-index: -8;
+}
+.so-9 {
+  left: 0px;
+  top: 0px;
+  z-index: -9;
+}
+.xuanxiang {
+  background-image: url('@|3-9.png|');
+  width: 240px;
+  height: 156px;
+  position: absolute;
+  top: 975px;
+  background-repeat: no-repeat;
+  .xuanxiang-show {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -63px;
+    display: none;
+  }
+}
+.xuanxiang-1 {
+  left: 127px;
+}
+.xuanxiang-2 {
+  left: 400px;
+}
+.xuanxiang.ok .dui {
+  display: block;
+}
+.xuanxiang.error {
+  background-image: url('@|3-10.png|');
+  .cuo {
+    display: block;
+  }
+}
+.mi-box {
+  position: absolute;
+  display: flex;
+  width: 565px;
+  left: 0;
+  right: -34px;
+  margin: auto;
+  top: 600px;
+  .item {
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+.mi {
+  background-image: url('@|mi.png|');
+  width: 166px;
+  height: 166px;
+  margin: 0 10px;
+}
+.kuohao {
+  background-image: url('@|kuohao.png|');
+  width: 166px;
+  height: 166px;
+  margin: 0 10px;
+}
+</style>
