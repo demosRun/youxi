@@ -5,15 +5,16 @@
     img.so.so-2(src="@|5-7.png|")
     img.so.so-3(src="@|5-5.png|")
     img.so.so-4(src="@|5-4.png|")
-    img.so.so-5(src="@|5-3.jpg|")
+    img.so.so-5(src="@|2-3.jpg|")
 </template>
 <script>
 module.exports = {
   created: function () {
+    clearInterval(clock)
     owo.animate('bounceInDown', this.query('.so-3'))
     setTimeout(() => {
       owo.go('page8//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-    }, 2000);
+    }, 3000);
   }
 }
 </script>

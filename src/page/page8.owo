@@ -5,68 +5,191 @@
     img.so.so-4(src="@|3-8-3.png|")
     img.so.so-5(src="@|3-7.png|")
     img.so.so-8(src="@|3-4-2.png|")
-    img.so.so-9(src="@|3-3.jpg|")
-    .xuanxiang-box.clear
-      .xuanxiang(o-tap="select")
+    img.so.so-9(src="@|2-3.jpg|")
+    .guanqia(font="jijia.ttf")
+    //- 时间盒子
+    .xin-box.clear(font="jijia.ttf")
+      .xin
+      .xin
+      .xin
+      .xin
+      .xin
+      .xin
+    //- 分数
+    .code 0/100
+    .mi-box.clear
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-      .xuanxiang(o-tap="select")
+        .text
+      .item.mi(o-tap="selectItem")
         img.so.xuanxiang-show.dui(src="@|3-6.png|")
         img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+        .text
 </template>
 <script>
 module.exports = {
-  select: function () {
-    this.$target.classList.add('ok')
+  selectItem: function () {
+    if (busy) return
+    clickMusic.play()
+    const timu = tiku3[this.data.activeIndex]
+    this.$target.getAttribute("right")
+    if (this.$target.getAttribute("right") == '1') {
+      this.$target.classList.add('ok')
+      code += 8
+      this.query('.code').innerText = `${code}/100`
+    } else {
+      this.$target.classList.add('error')
+      xin --
+      this.jiesuan()
+    }
+    this.$el.classList.add('selectd')
+    rand ++
+    if (rand > 15) {
+      setTimeout(() => {
+        owo.go('page6//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+      }, 2000);
+      return
+    }
     setTimeout(() => {
-      owo.go('page6//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-    }, 1000);
+      this.next()
+    }, 2000);
   },
-  select2: function () {
-    this.$target.classList.add('error')
+  data: {
+    activeIndexList: [],
+    activeIndex: 0,
+    code: 0,
   },
+  next: function () {
+    xin = 6
+    if (busy) return
+    busy = true
+    
+    const num = randomNum(0, tiku3.length - 1)
+    if (this.data.activeIndexList.includes(num)) {
+      busy = false
+      this.next()
+      return
+    } else {
+      this.data.activeIndexList.push(num)
+      this.$el.classList.remove('selectd')
+      this.getTimu(num)
+    }
+    this.queryAll('.mi').forEach(element => {
+      element.classList.remove('ok')
+      element.classList.remove('error')
+    });
+    this.query('.guanqia').innerText = `${rand}/15`
+  },
+  getTimu: function (key) {
+    const timu = tiku3[key]
+    const textArr = this.queryAll('.mi-box .item')
+    const rightNum = randomNum(0, 15)
+    for (let index = 0; index < textArr.length; index++) {
+      const element = textArr[index];
+      if (index == rightNum) {
+        element.query('.text').innerText = timu[1]
+        element.setAttribute("right", "1")
+        
+      } else {
+        element.query('.text').innerText = timu[0]
+        element.setAttribute("right", "0")
+      }
+    }
+    xin = 6
+    if (document.getElementById('toast')) document.getElementById('toast').outerHTML = ''
+    this.jiesuan()
+    busy = false
+  },
+  created: function () {
+    clearInterval(clock)
+    this.next()
+    clock = setInterval(() => {
+      xin--
+      this.jiesuan()
+      if (xin == 2) {
+        owo.tool.toast('答题即将超时!')
+      }
+      if (xin <= 0) {
+        xin = 6
+        this.next()
+        return
+      }
+      
+    }, 2000);
+  },
+  jiesuan: function () {
+    console.log('jisuan')
+    for (let index = 0; index < this.queryAll('.xin').length; index++) {
+      const element = this.queryAll('.xin')[index];
+      if (index < xin) {
+        element.classList.remove('close')
+      } else {
+        element.classList.add('close')
+      }
+    }
+  },
+  show: function () {
+    this.query('.code').innerText = `${code}/100`
+    rand = 11
+    busy = false
+  }
 }
 </script>
 <style lang="less">
@@ -151,22 +274,35 @@ module.exports = {
 }
 .mi-box {
   position: absolute;
-  display: flex;
   width: 565px;
   left: 0;
   right: -34px;
   margin: auto;
-  top: 600px;
+  top: 650px;
   .item {
     background-repeat: no-repeat;
     background-position: center;
+    float: left;
+    background-size: 100% 100%;
+    line-height: 121px;
+    text-align: center;
+    font-size: 54px;
+    position: relative;
+    color: #167878;
+    font-weight: bold;
+  }
+  .xuanxiang-show {
+    bottom: -27px;
+  }
+  .text {
+    pointer-events: none;
   }
 }
 .mi {
   background-image: url('@|mi.png|');
-  width: 166px;
-  height: 166px;
-  margin: 0 10px;
+  width: 121px;
+  height: 121px;
+  margin: 10px;
 }
 .kuohao {
   background-image: url('@|kuohao.png|');

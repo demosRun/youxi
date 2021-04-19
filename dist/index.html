@@ -1,336 +1,855 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <!-- 页面的元信息 -->
-    <title>{TAG_14226_TAG}</title>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"/>
-    <meta name="format-detection" content="telephone=no, email=no"/>
-    <meta name="apple-mobile-web-app-capable" content="yes"/>
-    <meta name="apple-mobile-web-app-status-bar-style" content="white"/>
-    <meta name="renderer" content="webkit"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <meta name="filetype" content="1"/>
-    <meta name="publishedtype" content="1"/>
-    <meta name="pagetype" content="2"/>
-    <meta name="screen-orientation" content="landscape"/>
-    <meta name="x5-orientation" content="landscape"/>
-    <meta name="full-screen" content="yes"/>
-    <meta name="x5-fullscreen" content="true"/>
-    <meta name="browsermode" content="application"/>
-    <meta name="x5-page-mode" content="app"/>
-    
-      <!-- 页面主样式文件 -->
-      <link charset="utf-8"  rel="stylesheet" href="./static/css/owo.core.css">
-      
-    <!-- 附属css文件 -->
-    <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
-      
-  </head>
-  <body>
-    <div class="scale-box">
+
+<head>
+  <!-- 页面的元信息 -->
+  <title>{TAG_14226_TAG}</title>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no, email=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+  <meta name="renderer" content="webkit" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="filetype" content="1" />
+  <meta name="publishedtype" content="1" />
+  <meta name="pagetype" content="2" />
+  <meta name="screen-orientation" content="landscape" />
+  <meta name="x5-orientation" content="landscape" />
+  <meta name="full-screen" content="yes" />
+  <meta name="x5-fullscreen" content="true" />
+  <meta name="browsermode" content="application" />
+  <meta name="x5-page-mode" content="app" />
+
+  <!-- 页面主样式文件 -->
+  <link charset="utf-8" rel="stylesheet" href="./static/css/owo.core.css">
+
+  <!-- 附属css文件 -->
+  <link rel="stylesheet" href="./static/css/main.css" charset="utf-8">
+
+</head>
+
+<body>
+  <div class="scale-box">
     <!-- 页面[loading]-->
-    <div class="loading-box page" template="loading" style="display: none;"><img class="loading" src="https://cunchu.site/ozzx/resource/loadingLogo.png"><div class="loading-bar"><div class="num-bar"></div></div><span class="text">Loading</span><div class="num">0%</div></div>
+    <div class="loading-box page" template="loading" style="display: none;">
+      <img class="loading" src="./static/resource/loading.png">
+      <div class="loading-bar">
+        <div class="num-bar"></div>
+      </div>
+      <span class="text">开机中...</span>
+      <div class="num">0%</div>
+    </div>
     <!-- 页面[page1]-->
-    <div class="page1 page" template="page1" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/23.png"><img class="so so-2" src="./static/resource/21.png"><div class="so so-3"><img class="so so-4" src="./static/resource/18.png"><img class="so so-5" src="./static/resource/17.png"><img class="so so-6" src="./static/resource/16.png"><img class="so so-7" src="./static/resource/15.png" o-animation="shrink" go="page2//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn"><img class="so so-8" src="./static/resource/14.png"><img class="so so-9" src="./static/resource/13.png"><img class="so so-10" src="./static/resource/11.png"><img class="so so-11" src="./static/resource/9.png"><img class="so so-12" src="./static/resource/7.png"></div><img class="so so-13" src="./static/resource/5.png"><img class="so so-14" src="./static/resource/4.png"><img class="so so-15" src="./static/resource/3.jpg"></div></div>
+    <div class="page1 page" template="page1" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/23.png">
+        <div class="so so-3">
+          <img class="so so-2" src="./static/resource/21.png">
+          <img class="so so-4" src="./static/resource/18.png" o-animation="rotate">
+          <img class="so so-5" src="./static/resource/17.png" o-animation="floatLeftRight">
+          <img class="so so-6" src="./static/resource/16.png" o-animation="flicker">
+          <img class="so so-7" src="./static/resource/15.png" o-animation="shrink" go="page2//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn">
+          <img class="so so-8" src="./static/resource/14.png">
+          <img class="so so-9" src="./static/resource/13.png">
+          <img class="so so-10" src="./static/resource/11.png" o-animation="bottomToTopHide">
+          <img class="so so-11" src="./static/resource/9.png">
+          <img class="so so-12" src="./static/resource/7.png">
+        </div>
+        <img class="so so-13" src="./static/resource/5.png" o-animation="floatUpDown">
+        <img class="so so-14" src="./static/resource/4.png" o-animation="floatUpDown">
+        <img class="so so-15" src="./static/resource/2-3.jpg">
+      </div>
+    </div>
     <!-- 页面[page2]-->
-    <div class="page2 page" template="page2" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/2-9.png"><img class="so so-2" src="./static/resource/2-7.png"><img class="so so-3" src="./static/resource/2-6.png"><img class="so so-4" src="./static/resource/2-5.png"><img class="so so-5" src="./static/resource/2-3.jpg"></div></div>
+    <div class="page2 page" template="page2" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/2-9.png">
+        <img class="so so-2" src="./static/resource/2-7.png">
+        <img class="so so-3" src="./static/resource/2-6.png">
+        <img class="so so-4" src="./static/resource/2-5.png">
+        <img class="so so-5" src="./static/resource/2-3.jpg">
+      </div>
+    </div>
     <!-- 页面[page3]-->
-    <div class="page3 page" template="page3" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/3-11.png"><img class="so so-4" src="./static/resource/3-8.png"><img class="so so-5" src="./static/resource/3-7.png"><img class="so so-8" src="./static/resource/3-4.png"><img class="so so-9" src="./static/resource/3-3.jpg"><div class="guanqia">1/15</div><div class="xin-box clear"><div class="xin"></div><div class="xin"></div><div class="xin"></div><div class="xin"></div><div class="xin"></div><div class="xin"></div></div><div class="code">0/100</div><div class="xuanxiang xuanxiang-1" o-tap="selectItem(0)" o-animation="shrink"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"><div class="text"></div></div><div class="xuanxiang xuanxiang-2" o-tap="selectItem(1)" o-animation="shrink"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"><div class="text"></div></div><div class="text-box text-box-1"></div><div class="text-box text-box-2"></div></div></div>
+    <div class="page3 page" template="page3" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/3-11.png">
+        <img class="so so-4" src="./static/resource/3-8.png">
+        <img class="so so-5" src="./static/resource/3-7.png">
+        <img class="so so-8" src="./static/resource/3-4.png">
+        <img class="so so-9" src="./static/resource/2-3.jpg">
+        <div class="guanqia" font="jijia"></div>
+        <div class="xin-box clear" font="jijia">
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+        </div>
+        <div class="code">0/100</div>
+        <div class="xuanxiang xuanxiang-1" o-tap="selectItem(0)" o-animation="shrink">
+          <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+          <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+          <div class="text"></div>
+        </div>
+        <div class="xuanxiang xuanxiang-2" o-tap="selectItem(1)" o-animation="shrink">
+          <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+          <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+          <div class="text"></div>
+        </div>
+        <div class="text-box text-box-1"></div>
+        <div class="text-box text-box-2"></div>
+      </div>
+    </div>
     <!-- 页面[page4]-->
-    <div class="page4 page" template="page4" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/4-7.png"><img class="so so-2" src="./static/resource/4-5.png"><img class="so so-3" src="./static/resource/4-4.png"><img class="so so-4" src="./static/resource/4-3.jpg"></div></div>
+    <div class="page4 page" template="page4" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/4-7.png">
+        <img class="so so-2" src="./static/resource/4-5.png">
+        <img class="so so-3" src="./static/resource/4-4.png">
+        <img class="so so-4" src="./static/resource/2-3.jpg">
+      </div>
+    </div>
     <!-- 页面[page5]-->
-    <div class="page5 page" template="page5" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/5-9.png"><img class="so so-2" src="./static/resource/5-7.png"><img class="so so-3" src="./static/resource/5-5.png"><img class="so so-4" src="./static/resource/5-4.png"><img class="so so-5" src="./static/resource/5-3.jpg"></div></div>
+    <div class="page5 page" template="page5" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/5-9.png">
+        <img class="so so-2" src="./static/resource/5-7.png">
+        <img class="so so-3" src="./static/resource/5-5.png">
+        <img class="so so-4" src="./static/resource/5-4.png">
+        <img class="so so-5" src="./static/resource/2-3.jpg">
+      </div>
+    </div>
     <!-- 页面[page6]-->
-    <div class="page6 page" template="page6" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/6-25.png"><img class="so so-2" src="./static/resource/6-24.png" o-animation="shrink" o-tap="owo.script.share.showShare()"><img class="so so-3" src="./static/resource/6-23.png" o-tap="window.location.replace('')"><img class="so so-4" src="./static/resource/6-22.png"><img class="so so-5" src="./static/resource/6-21.png"><img class="so so-6" src="./static/resource/6-19.png"><img class="so so-7" src="./static/resource/6-17.png"><img class="so so-8" src="./static/resource/6-15.png"><img class="so so-9" src="./static/resource/6-13.png"><img class="so so-10" src="./static/resource/6-11.png"><img class="so so-11" src="./static/resource/6-9.png"><img class="so so-12" src="./static/resource/6-7.png"><img class="so so-13" src="./static/resource/6-5.png"><img class="so so-14" src="./static/resource/6-3.jpg"></div></div>
+    <div class="page6 page" template="page6" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/6-25.png">
+        <img class="so so-2" src="./static/resource/6-24.png" o-animation="shrink" o-tap="owo.script.share.showShare()">
+        <img class="so so-3" src="./static/resource/6-23.png" o-animation="shrink" o-tap="window.location.replace('')">
+        <img class="so so-5" src="./static/resource/6-21.png" o-animation="shrink">
+        <img class="so so-6 elementToAnimate2" src="./static/resource/6-19.png">
+        <img class="so so-7 elementToAnimate3" src="./static/resource/6-17.png">
+        <img class="so so-8" src="./static/resource/6-15.png">
+        <img class="so so-9 elementToAnimate5" src="./static/resource/6-13.png">
+        <img class="so so-10" src="./static/resource/6-11.png" o-animation="rotate">
+        <img class="so so-11 elementToAnimate" src="./static/resource/6-9.png">
+        <img class="so so-12 elementToAnimate4" src="./static/resource/6-7.png">
+        <img class="so so-13 elementToAnimate6" src="./static/resource/6-5.png">
+        <img class="so so-14" src="./static/resource/6-3.jpg">
+        <div class="code" font="jijia">1234567890分</div>
+        <ul class="paihang"></ul>
+      </div>
+    </div>
     <!-- 页面[page7]-->
-    <div class="page7 page" template="page7" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/3-11-2.png"><img class="so so-4" src="./static/resource/3-8-2.png"><img class="so so-5" src="./static/resource/3-7.png"><img class="so so-8" src="./static/resource/3-4-2.png"><img class="so so-9" src="./static/resource/3-3.jpg"><div class="guanqia">1/15</div><div class="xin-box clear"><div class="xin"></div><div class="xin"></div><div class="xin"></div><div class="xin"></div><div class="xin"></div><div class="xin"></div></div><div class="code">0/100</div><div class="mi-box"><div class="item mi"></div><div class="item mi"></div><div class="item kuohao"></div></div><div class="xuanxiang xuanxiang-1" o-tap="select1"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang xuanxiang-2" o-tap="select2"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div></div></div>
+    <div class="page7 page" template="page7" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/3-11-2.png">
+        <img class="so so-4" src="./static/resource/3-8-2.png">
+        <img class="so so-5" src="./static/resource/3-7.png">
+        <img class="so so-8" src="./static/resource/3-4-2.png">
+        <img class="so so-9" src="./static/resource/2-3.jpg">
+        <div class="guanqia" font="jijia"></div>
+        <div class="hide" font="jijia">窈窕花蕾瘙痒殷红砧板佣金亲家癖好成绩根茎_然离去怅伥水_不通泄泻萎_不振糜靡相辅相_成承脉_紊乱搏膊说话_巴嗑磕以逸_劳待代食不_腹裹果_年累月长常万古_芳留流一_莫展筹愁按_就班步部相形见_拙绌汩汨姬姫采釆壶壸垚壵妹妺裹裏祇衹塵麈畬畲已巳治冶書畫裹裏</div>
+        <div class="xin-box clear" font="jijia">
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+        </div>
+        <div class="code">0/100</div>
+        <div class="mi-box">
+          <div class="item mi"></div>
+          <div class="item mi"></div>
+          <div class="item kuohao"></div>
+          <div class="item mi"></div>
+        </div>
+        <div class="xuanxiang xuanxiang-1" o-tap="selectItem(0)">
+          <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+          <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+          <div class="text"></div>
+        </div>
+        <div class="xuanxiang xuanxiang-2" o-tap="selectItem(1)">
+          <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+          <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+          <div class="text"></div>
+        </div>
+      </div>
+    </div>
     <!-- 页面[page8]-->
-    <div class="page8 page" template="page8" style="display: none;"><div class="so so-0"><img class="so so-1" src="./static/resource/3-11-3.png"><img class="so so-4" src="./static/resource/3-8-3.png"><img class="so so-5" src="./static/resource/3-7.png"><img class="so so-8" src="./static/resource/3-4-2.png"><img class="so so-9" src="./static/resource/3-3.jpg"><div class="xuanxiang-box clear"><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div><div class="xuanxiang" o-tap="select"><img class="so xuanxiang-show dui" src="./static/resource/3-6.png"><img class="so xuanxiang-show cuo" src="./static/resource/3-5.png"></div></div></div></div></div>
-    <!-- 插件[share]-->
-    <div class="share-page owo-block" o-tap="hideShare" template="share" style="display: none;"><img class="share-img" src="https://cunchu.site/ozzx/resource/share.png"></div>
-    
-<!-- 框架script文件 -->
-<script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
-<script type="text/javascript" charset="UTF-8">
-owo.script = {
-  "loading": {
-    "data": {
-      "imgList": [""]
-    },
-    "show": function show() {
-      var mum = owo.query('.num')[0];
-      var numBar = owo.query('.num-bar')[0];
-      this.preloadImages(this.data.imgList, function (e) {
-        setTimeout(function () {
-          owo.go('page1////true');
-        }, 500);
-      }, function (num) {
-        numBar.style.width = num + '%';
-        mum.innerHTML = num + '%';
-      });
-    },
-    "preloadImage": function preloadImage(src, successFn) {
-      var image = new Image();
-      image.src = src;
+    <div class="page8 page" template="page8" style="display: none;">
+      <div class="so so-0">
+        <img class="so so-1" src="./static/resource/3-11-3.png">
+        <img class="so so-4" src="./static/resource/3-8-3.png">
+        <img class="so so-5" src="./static/resource/3-7.png">
+        <img class="so so-8" src="./static/resource/3-4-2.png">
+        <img class="so so-9" src="./static/resource/2-3.jpg">
+        <div class="guanqia" font="jijia"></div>
+        <div class="xin-box clear" font="jijia">
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+          <div class="xin"></div>
+        </div>
+        <div class="code">0/100</div>
+        <div class="mi-box clear">
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+          <div class="item mi" o-tap="selectItem">
+            <img class="so xuanxiang-show dui" src="./static/resource/3-6.png">
+            <img class="so xuanxiang-show cuo" src="./static/resource/3-5.png">
+            <div class="text"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 插件[share]-->
+  <div class="share-page owo-block" o-tap="hideShare" template="share" style="display: none;">
+    <img class="share-img" src="https://cunchu.site/ozzx/resource/share.png">
+  </div>
+  <!-- 插件[music]-->
+  <div class="music-menu owo-block" template="music" style="display: none;">
+    <img class="music-icon" src="./static/resource/play-1.png" o-tap="switchPlay">
+  </div>
 
-      image.onload = function () {
-        successFn && successFn(src);
-      };
+  <!-- 框架script文件 -->
+  <script src="./static/js/owo.core.js" type="text/javascript" charset="UTF-8"></script>
+  <script type="text/javascript" charset="UTF-8">
+    // 模块 page1 的script代码
+    var clickMusic = new Audio("./static/resource/click.mp3"); // 模块 music 的script代码
+    // 微信自动播放音乐
 
-      image.onerror = function (error) {
-        successFn && successFn(src);
-      };
-    },
-    "preloadImages": function preloadImages(srcs, doneFn, progressFn) {
-      var _this = this;
-
-      if (!Array.isArray(srcs)) {
-        console.log('第一个参数只能是一个数组');
-      } else {
-        var allCount = srcs.length;
-        var doneCount = 0;
-        srcs.forEach(function (srcItem) {
-          _this.preloadImage(srcItem, function () {
-            doneCount++;
-            progressFn && progressFn(Math.ceil(100 * doneCount / allCount));
-
-            if (doneCount === allCount) {
-              doneFn && doneFn();
-            }
+    document.addEventListener("WeixinJSBridgeReady", function() {
+      owo.script.music.play();
+    }, false);
+    owo.script = {
+      "loading": {
+        "data": {
+          "imgList": ["./static/resource/2-3.jpg", "./static/resource/14.png", "./static/resource/4-5.png", "./static/resource/5-5.png", "./static/resource/2-7.png", "./static/resource/7.png", "./static/resource/4-4.png", "./static/resource/6-22.png", "./static/resource/2-5.png", "./static/resource/3-4.png", "./static/resource/5-4.png", "./static/resource/3-4-2.png", "./static/resource/6-9.png", "./static/resource/6-7.png", "./static/resource/6-21.png", "./static/resource/6-19.png", "./static/resource/6-24.png", "./static/resource/6-5.png", "./static/resource/15.png", "./static/resource/3-8.png", "./static/resource/3-11.png", "./static/resource/6-23.png", "./static/resource/6-11.png", "./static/resource/6-13.png", "./static/resource/3-10.png", "./static/resource/2-6.png", "./static/resource/16.png", "./static/resource/6-15.png", "./static/resource/3-9.png", "./static/resource/3-8-2.png", "./static/resource/17.png", "./static/resource/23.png", "./static/resource/2-9.png", "./static/resource/3-7.png", "./static/resource/4-7.png", "./static/resource/5-9.png", "./static/resource/6-25.png", "./static/resource/3-5.png", "./static/resource/5-7.png", "./static/resource/3-11-3.png", "./static/resource/6-17.png", "./static/resource/3-6.png", "./static/resource/3-11-2.png", "./static/resource/21.png", "./static/resource/18.png", "./static/resource/4.png", "./static/resource/3-8-3.png", "./static/resource/mi.png", "./static/resource/5.png", "./static/resource/9.png", "./static/resource/11.png", "./static/resource/13.png", "./static/resource/loading.png", "./static/resource/kuohao.png", "./static/resource/xin-active.png", "./static/resource/xin.png"]
+        },
+        "show": function show() {
+          var mum = owo.query('.num')[0];
+          var numBar = owo.query('.num-bar')[0];
+          this.preloadImages(this.data.imgList, function(e) {
+            setTimeout(function() {
+              owo.go('page1////true');
+            }, 500);
+          }, function(num) {
+            numBar.style.width = num + '%';
+            mum.innerHTML = num + '%';
           });
-        });
-      }
-    }
-  },
-  "page1": {},
-  "page2": {
-    "created": function created() {
-      owo.animate('bounceInDown', this.query('.so-2'));
-      setTimeout(function () {
-        owo.go('page3//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-      }, 2000);
-    }
-  },
-  "page3": {
-    "data": {
-      "activeIndexList": [],
-      "activeIndex": 0,
-      "code": 0
-    },
-    "select1": function select1() {
-      this.$target.classList.add('ok');
-      setTimeout(function () {
-        owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-      }, 1000);
-    },
-    "select2": function select2() {
-      this.$target.classList.add('error');
-    },
-    "selectItem": function selectItem(ind) {
-      var _this2 = this;
+        },
+        "preloadImage": function preloadImage(src, successFn) {
+          var image = new Image();
+          image.src = src;
 
-      var timu = tiku1[this.data.activeIndex];
+          image.onload = function() {
+            successFn && successFn(src);
+          };
 
-      if (ind == timu.right) {
-        this.$target.classList.add('ok');
-        code += 6;
-      } else {
-        this.$target.classList.add('error');
-        xin--;
-      }
+          image.onerror = function(error) {
+            successFn && successFn(src);
+          };
+        },
+        "preloadImages": function preloadImages(srcs, doneFn, progressFn) {
+          var _this = this;
 
-      this.jiesuan();
-      this.$el.classList.add('selectd');
-      setTimeout(function () {
-        _this2.next();
-      }, 2000);
-    },
-    "next": function next() {
-      if (rand > 5) {
-        setTimeout(function () {
-          owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-        }, 1000);
-        return;
-      }
+          if (!Array.isArray(srcs)) {
+            console.log('第一个参数只能是一个数组');
+          } else {
+            var allCount = srcs.length;
+            var doneCount = 0;
+            srcs.forEach(function(srcItem) {
+              _this.preloadImage(srcItem, function() {
+                doneCount++;
+                progressFn && progressFn(Math.ceil(100 * doneCount / allCount));
 
-      rand++;
-      var num = randomNum(0, tiku1.length);
+                if (doneCount === allCount) {
+                  doneFn && doneFn();
+                }
+              });
+            });
+          }
+        }
+      },
+      "page1": {
+        "created": function created() {
+          owo.animate('bounceInDown', this.query('.so-8'), 1000);
+          owo.animate('slideInLeft', this.query('.so-3'));
+        }
+      },
+      "page2": {
+        "created": function created() {
+          owo.animate('bounceInDown', this.query('.so-2'));
+          setTimeout(function() {
+            owo.go('page3//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
+          }, 3000);
+        }
+      },
+      "page3": {
+        "data": {
+          "activeIndexList": [],
+          "activeIndex": 0,
+          "code": 0
+        },
+        "selectItem": function selectItem(ind) {
+          var _this2 = this;
 
-      if (this.data.activeIndexList.includes(num)) {
-        this.next();
-      } else {
-        this.data.activeIndexList.push(num);
-        this.$el.classList.remove('selectd');
-        this.getTimu(num);
-      }
+          if (busy) return;
+          clickMusic.play();
+          ind = parseInt(ind);
+          var timu = tiku1[this.data.activeIndex];
+          console.log(timu);
+          console.log(timu.right, ind);
 
-      this.queryAll('.xuanxiang').forEach(function (element) {
-        element.classList.remove('ok');
-        element.classList.remove('error');
-      });
-      this.query('.guanqia').innerText = rand + "/15";
-    },
-    "created": function created() {
-      this.next();
-    },
-    "getTimu": function getTimu(key) {
-      var timu = tiku1[key];
-      console.log(timu);
-      this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0];
-      this.query('.xuanxiang-2 .text').innerText = timu['pinyin'][1];
-      this.query('.text-box-1').innerText = timu['text'][0];
-      this.query('.text-box-2').innerText = timu['text'][1];
+          if (ind == timu.right) {
+            this.$target.classList.add('ok');
+            code += 6;
+            this.query('.code').innerText = code + "/100";
+          } else {
+            this.$target.classList.add('error');
+          }
 
-      if (timu.show == 0) {
-        this.query('.text-box-1').classList.add('active');
-        this.query('.text-box-2').classList.remove('active');
-      } else {
-        this.query('.text-box-2').classList.add('active');
-        this.query('.text-box-1').classList.remove('active');
-      }
-    },
-    "jiesuan": function jiesuan() {
-      for (var index = 0; index < this.queryAll('.xin').length; index++) {
-        var element = this.queryAll('.xin')[index];
+          this.$el.classList.add('selectd');
+          rand++;
 
-        if (index < xin) {
-          element.classList.remove('close');
-        } else {
-          element.classList.add('close');
+          if (rand > 5) {
+            setTimeout(function() {
+              owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
+            }, 2000);
+            return;
+          }
+
+          setTimeout(function() {
+            _this2.next();
+          }, 2000);
+        },
+        "next": function next() {
+          if (busy) return;
+          busy = true; // setTimeout(() => {
+          //   busy = false
+          // }, 300);
+
+          xin = 6;
+          console.log('xiayige');
+          var num = randomNum(0, tiku1.length - 1);
+          console.log(num);
+
+          if (this.data.activeIndexList.includes(num)) {
+            busy = false;
+            this.next();
+          } else {
+            this.data.activeIndexList.push(num);
+            this.$el.classList.remove('selectd');
+            this.getTimu(num);
+          }
+
+          this.queryAll('.xuanxiang').forEach(function(element) {
+            element.classList.remove('ok');
+            element.classList.remove('error');
+          });
+          this.query('.guanqia').innerText = rand + "/15";
+        },
+        "created": function created() {
+          var _this3 = this;
+
+          rand = 1;
+          this.query('.guanqia').innerText = rand + "/15";
+          this.next();
+          clearInterval(clock);
+          clock = setInterval(function() {
+            xin--;
+
+            _this3.jiesuan();
+
+            if (xin == 2) {
+              owo.tool.toast('答题即将超时!', {
+                "time": 4000
+              });
+            }
+
+            if (xin <= 0) {
+              xin = 6;
+              console.log('下一步');
+
+              _this3.next();
+            }
+          }, 2000);
+        },
+        "getTimu": function getTimu(key) {
+          this.data.activeIndex = key;
+          var timu = tiku1[key];
+          console.log(timu);
+          this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0];
+          this.query('.xuanxiang-2 .text').innerText = timu['pinyin'][1];
+          this.query('.text-box-1').innerText = timu['text'][0];
+          this.query('.text-box-2').innerText = timu['text'][1];
+
+          if (timu.show == 0) {
+            this.query('.text-box-1').classList.add('active');
+            this.query('.text-box-2').classList.remove('active');
+          } else {
+            this.query('.text-box-2').classList.add('active');
+            this.query('.text-box-1').classList.remove('active');
+          }
+
+          this.jiesuan();
+          if (document.getElementById('toast')) document.getElementById('toast').outerHTML = '';
+          busy = false;
+        },
+        "jiesuan": function jiesuan() {
+          // console.log('jisuan')
+          for (var index = 0; index < this.queryAll('.xin').length; index++) {
+            var element = this.queryAll('.xin')[index];
+
+            if (index < xin) {
+              element.classList.remove('close');
+            } else {
+              element.classList.add('close');
+            }
+          }
+        }
+      },
+      "page4": {
+        "show": function show() {
+          clearInterval(clock);
+          owo.animate('bounceInDown', this.query('.so-2'));
+          setTimeout(function() {
+            owo.go('page7//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
+          }, 3000);
+        }
+      },
+      "page5": {
+        "created": function created() {
+          clearInterval(clock);
+          owo.animate('bounceInDown', this.query('.so-3'));
+          setTimeout(function() {
+            owo.go('page8//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
+          }, 3000);
+        }
+      },
+      "page6": {
+        "show": function show() {
+          var _this4 = this;
+
+          clearInterval(clock);
+          this.query('.code').innerText = code + '分';
+          fetch("http://bp.people.com.cn/ydnr_game/index.php/game/paihang").then(function(response) {
+            return response.json();
+          }).then(function(result) {
+            console.log(result);
+            var liData = '';
+            result.forEach(function(element) {
+              liData += "<li><img src=\"" + element.headurl + "\"><span class=\"name\">" + element.name + "</span>-----------<span class=\"code-item\">" + element.num + "\u5206</span></li>";
+            });
+            _this4.query('.paihang').innerHTML = liData;
+          })["catch"](function(error) {
+            return console.log('error', error);
+          });
+        }
+      },
+      "page7": {
+        "selectItem": function selectItem(ind) {
+          var _this5 = this;
+
+          if (busy) return;
+          clickMusic.play();
+          var timu = tiku2[this.data.activeIndex];
+          this.query('.kuohao').innerText = timu['pinyin'][timu.right];
+
+          if (ind == timu.right) {
+            this.$target.classList.add('ok');
+            code += 6;
+            this.query('.code').innerText = code + "/100";
+          } else {
+            this.$target.classList.add('error');
+            xin--;
+            this.jiesuan();
+          }
+
+          this.$el.classList.add('selectd');
+          rand++;
+
+          if (rand > 10) {
+            setTimeout(function() {
+              owo.go('page5//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
+            }, 2000);
+            return;
+          }
+
+          setTimeout(function() {
+            _this5.next();
+          }, 2000);
+        },
+        "data": {
+          "activeIndexList": [],
+          "activeIndex": 0,
+          "code": 0
+        },
+        "next": function next() {
+          if (busy) return;
+          busy = true;
+          var num = randomNum(0, tiku2.length - 1);
+
+          if (this.data.activeIndexList.includes(num)) {
+            busy = false;
+            this.next();
+            return;
+          } else {
+            this.data.activeIndexList.push(num);
+            this.$el.classList.remove('selectd');
+            this.getTimu(num);
+          }
+
+          this.queryAll('.xuanxiang').forEach(function(element) {
+            element.classList.remove('ok');
+            element.classList.remove('error');
+          });
+          this.query('.guanqia').innerText = rand + "/15";
+        },
+        "getTimu": function getTimu(key) {
+          this.data.activeIndex = key;
+          var timu = tiku2[key];
+          var textArr = this.queryAll('.mi-box .item');
+
+          for (var index = 0; index < timu.text.length; index++) {
+            var element = timu.text[index];
+            console.log(element);
+
+            if (element == '_') {
+              textArr[index].innerText = '';
+              textArr[index].classList.add('kuohao');
+              textArr[index].classList.remove('mi');
+            } else {
+              textArr[index].innerText = element;
+              textArr[index].classList.remove('kuohao');
+              textArr[index].classList.add('mi');
+            }
+          }
+
+          this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0];
+          this.query('.xuanxiang-2 .text').innerText = timu['pinyin'][1]; // this.query('.text-box-1').innerText = timu['text'][0]
+          // this.query('.text-box-2').innerText = timu['text'][1]
+          // if (timu.show == 0) {
+          //   this.query('.text-box-1').classList.add('active')
+          //   this.query('.text-box-2').classList.remove('active')
+          // } else {
+          //   this.query('.text-box-2').classList.add('active')
+          //   this.query('.text-box-1').classList.remove('active')
+          // }
+
+          if (document.getElementById('toast')) document.getElementById('toast').outerHTML = '';
+          xin = 6;
+          this.jiesuan();
+          busy = false;
+        },
+        "created": function created() {
+          var _this6 = this;
+
+          this.query('.code').innerText = code + "/100";
+          clearInterval(clock);
+          rand = 6;
+          this.next();
+          clock = setInterval(function() {
+            xin--;
+
+            _this6.jiesuan();
+
+            if (xin == 2) {
+              owo.tool.toast('答题即将超时!');
+            }
+
+            if (xin <= 0) {
+              xin = 6;
+
+              _this6.next();
+
+              return;
+            }
+          }, 2000);
+        },
+        "jiesuan": function jiesuan() {
+          console.log('jisuan');
+
+          for (var index = 0; index < this.queryAll('.xin').length; index++) {
+            var element = this.queryAll('.xin')[index];
+
+            if (index < xin) {
+              element.classList.remove('close');
+            } else {
+              element.classList.add('close');
+            }
+          }
+        },
+        "show": function show() {
+          this.query('.code').innerText = code + "/100";
+          rand = 6;
+          busy = false;
+        }
+      },
+      "page8": {
+        "selectItem": function selectItem() {
+          var _this7 = this;
+
+          if (busy) return;
+          clickMusic.play();
+          var timu = tiku3[this.data.activeIndex];
+          this.$target.getAttribute("right");
+
+          if (this.$target.getAttribute("right") == '1') {
+            this.$target.classList.add('ok');
+            code += 8;
+            this.query('.code').innerText = code + "/100";
+          } else {
+            this.$target.classList.add('error');
+            xin--;
+            this.jiesuan();
+          }
+
+          this.$el.classList.add('selectd');
+          rand++;
+
+          if (rand > 15) {
+            setTimeout(function() {
+              owo.go('page6//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
+            }, 2000);
+            return;
+          }
+
+          setTimeout(function() {
+            _this7.next();
+          }, 2000);
+        },
+        "data": {
+          "activeIndexList": [],
+          "activeIndex": 0,
+          "code": 0
+        },
+        "next": function next() {
+          xin = 6;
+          if (busy) return;
+          busy = true;
+          var num = randomNum(0, tiku3.length - 1);
+
+          if (this.data.activeIndexList.includes(num)) {
+            busy = false;
+            this.next();
+            return;
+          } else {
+            this.data.activeIndexList.push(num);
+            this.$el.classList.remove('selectd');
+            this.getTimu(num);
+          }
+
+          this.queryAll('.mi').forEach(function(element) {
+            element.classList.remove('ok');
+            element.classList.remove('error');
+          });
+          this.query('.guanqia').innerText = rand + "/15";
+        },
+        "getTimu": function getTimu(key) {
+          var timu = tiku3[key];
+          var textArr = this.queryAll('.mi-box .item');
+          var rightNum = randomNum(0, 15);
+
+          for (var index = 0; index < textArr.length; index++) {
+            var element = textArr[index];
+
+            if (index == rightNum) {
+              element.query('.text').innerText = timu[1];
+              element.setAttribute("right", "1");
+            } else {
+              element.query('.text').innerText = timu[0];
+              element.setAttribute("right", "0");
+            }
+          }
+
+          xin = 6;
+          if (document.getElementById('toast')) document.getElementById('toast').outerHTML = '';
+          this.jiesuan();
+          busy = false;
+        },
+        "created": function created() {
+          var _this8 = this;
+
+          clearInterval(clock);
+          this.next();
+          clock = setInterval(function() {
+            xin--;
+
+            _this8.jiesuan();
+
+            if (xin == 2) {
+              owo.tool.toast('答题即将超时!');
+            }
+
+            if (xin <= 0) {
+              xin = 6;
+
+              _this8.next();
+
+              return;
+            }
+          }, 2000);
+        },
+        "jiesuan": function jiesuan() {
+          console.log('jisuan');
+
+          for (var index = 0; index < this.queryAll('.xin').length; index++) {
+            var element = this.queryAll('.xin')[index];
+
+            if (index < xin) {
+              element.classList.remove('close');
+            } else {
+              element.classList.add('close');
+            }
+          }
+        },
+        "show": function show() {
+          this.query('.code').innerText = code + "/100";
+          rand = 11;
+          busy = false;
+        }
+      },
+      "share": {
+        "created": function created() {
+          if (autoScaleInfo && autoScaleInfo.hideHeight) {
+            this.$el.getElementsByClassName('share-img')[0].style.top = -autoScaleInfo.hideHeight + 'px';
+          }
+        },
+        "showShare": function showShare() {
+          this.$el.style.display = 'block';
+        },
+        "hideShare": function hideShare() {
+          this.$el.style.display = 'none';
+        },
+        "switchShare": function switchShare() {
+          if (this.$el.style.display == 'block') {
+            this.$el.style.display = 'none';
+          } else {
+            this.$el.style.display = 'block';
+          }
+        }
+      },
+      "music": {
+        "data": {
+          "music": null,
+          "musicIsPlay": false
+        },
+        "switchPlay": function switchPlay() {
+          this.data.musicIsPlay ? this.pause() : this.play();
+        },
+        "play": function play() {
+          console.log('播放音乐');
+
+          if (!this.data.musicIsPlay) {
+            this.data.musicIsPlay = true;
+            this.data.music = new Audio("http://cunchu-1251887489.cos.ap-beijing.myqcloud.com/people/music/%E9%BA%A6%E7%94%B0%E9%87%8C%E7%9A%84%E5%BE%AE%E9%A3%8E_1.mp3");
+            this.data.music.volume = 0.2;
+            this.data.music.loop = true;
+            this.data.music.play();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.src = './static/resource/play-1.png';
+            icon.classList.add('active');
+          }
+        },
+        "pause": function pause() {
+          if (this.data.musicIsPlay) {
+            this.data.musicIsPlay = false;
+            this.data.music.pause();
+            var icon = document.getElementsByClassName('music-icon')[0];
+            icon.src = './static/resource/play-2.png';
+            icon.classList.remove('active');
+          }
         }
       }
+    };
+  </script>
 
-      this.query('.code').innerText = code + "/100";
-    }
-  },
-  "page4": {
-    "created": function created() {
-      owo.animate('bounceInDown', this.query('.so-2'));
-      setTimeout(function () {
-        owo.go('page7//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-      }, 2000);
-    }
-  },
-  "page5": {
-    "created": function created() {
-      owo.animate('bounceInDown', this.query('.so-3'));
-      setTimeout(function () {
-        owo.go('page8//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-      }, 2000);
-    }
-  },
-  "page6": {},
-  "page7": {
-    "select1": function select1() {
-      this.$target.classList.add('ok');
-      setTimeout(function () {
-        owo.go('page5//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-      }, 1000);
-    },
-    "select2": function select2() {
-      this.$target.classList.add('error');
-    },
-    "data": {
-      "activeIndexList": [],
-      "activeIndex": 0,
-      "code": 0
-    },
-    "next": function next() {
-      for (var index = 0; index < this.queryAll('.xin').length; index++) {
-        var element = this.queryAll('.xin')[index];
+  <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript" charset="UTF-8"></script>
+  <script src="./static/js/main.js" type="text/javascript" charset="UTF-8"></script>
 
-        if (index < xin) {
-          element.classList.remove('close');
-        } else {
-          element.classList.add('close');
-        }
-      }
+  <script src="./static/js/toast.js" type="text/javascript" charset="UTF-8"></script>
+</body>
 
-      this.query('.code').innerText = code + "/100";
-
-      if (rand > 10) {
-        setTimeout(function () {
-          owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-        }, 1000);
-        return;
-      }
-
-      rand++;
-      var num = randomNum(0, tiku1.length);
-
-      if (this.data.activeIndexList.includes(num)) {
-        this.next();
-      } else {
-        this.data.activeIndexList.push(num);
-        this.$el.classList.remove('selectd');
-        this.getTimu(num);
-      }
-
-      this.queryAll('.xuanxiang').forEach(function (element) {
-        element.classList.remove('ok');
-        element.classList.remove('error');
-      });
-      this.query('.guanqia').innerText = rand + "/15";
-    },
-    "getTimu": function getTimu(key) {
-      var timu = tiku1[key];
-      console.log(timu);
-      this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0];
-      this.query('.xuanxiang-2 .text').innerText = timu['pinyin'][1];
-      this.query('.text-box-1').innerText = timu['text'][0];
-      this.query('.text-box-2').innerText = timu['text'][1];
-
-      if (timu.show == 0) {
-        this.query('.text-box-1').classList.add('active');
-        this.query('.text-box-2').classList.remove('active');
-      } else {
-        this.query('.text-box-2').classList.add('active');
-        this.query('.text-box-1').classList.remove('active');
-      }
-    },
-    "created": function created() {
-      rand = 5;
-      this.next();
-    }
-  },
-  "page8": {
-    "select": function select() {
-      this.$target.classList.add('ok');
-      setTimeout(function () {
-        owo.go('page6//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn');
-      }, 1000);
-    },
-    "select2": function select2() {
-      this.$target.classList.add('error');
-    }
-  },
-  "share": {
-    "created": function created() {
-      if (autoScaleInfo && autoScaleInfo.hideHeight) {
-        this.$el.getElementsByClassName('share-img')[0].style.top = -autoScaleInfo.hideHeight + 'px';
-      }
-    },
-    "showShare": function showShare() {
-      this.$el.style.display = 'block';
-    },
-    "hideShare": function hideShare() {
-      this.$el.style.display = 'none';
-    },
-    "switchShare": function switchShare() {
-      if (this.$el.style.display == 'block') {
-        this.$el.style.display = 'none';
-      } else {
-        this.$el.style.display = 'block';
-      }
-    }
-  }
-};
-</script>
-
-    <script src="http://tools.people.com.cn/libs/jquery/1.11.1/jquery-1.11.1.min.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="https://cunchu.site/owo/plug/autoScale.js" type="text/javascript"  charset="UTF-8"></script>
-    <script src="./static/js/main.js" type="text/javascript"  charset="UTF-8"></script>
-
-  </body>
 </html>

@@ -5,10 +5,10 @@
     img.so.so-4(src="@|3-8.png|")
     img.so.so-5(src="@|3-7.png|")
     img.so.so-8(src="@|3-4.png|")
-    img.so.so-9(src="@|3-3.jpg|")
-    .guanqia 1/15
+    img.so.so-9(src="@|2-3.jpg|")
+    .guanqia(font="jijia.ttf")
     //- 时间盒子
-    .xin-box.clear
+    .xin-box.clear(font="jijia.ttf")
       .xin
       .xin
       .xin
@@ -35,40 +35,46 @@ module.exports = {
     activeIndex: 0,
     code: 0,
   },
-  select1: function () {
-    this.$target.classList.add('ok')
-    setTimeout(() => {
-      owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-    }, 1000);
-  },
-  select2: function () {
-    this.$target.classList.add('error')
-  },
   selectItem: function (ind) {
+    if (busy) return
+    
+    clickMusic.play()
+    ind = parseInt(ind)
     const timu = tiku1[this.data.activeIndex]
+    console.log(timu)
+    console.log(timu.right, ind)
     if (ind == timu.right) {
       this.$target.classList.add('ok')
       code += 6
+      this.query('.code').innerText = `${code}/100`
     } else {
       this.$target.classList.add('error')
-      xin --
     }
-    this.jiesuan()
     this.$el.classList.add('selectd')
+    rand ++
+    if (rand > 5) {
+      setTimeout(() => {
+        owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+      }, 2000);
+      return
+    }
     setTimeout(() => {
       this.next()
     }, 2000);
   },
   next: function () {
-    if (rand > 5) {
-      setTimeout(() => {
-        owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-      }, 1000);
-      return
-    }
-    rand ++
-    const num = randomNum(0, tiku1.length)
+    if (busy) return
+    busy = true
+    // setTimeout(() => {
+    //   busy = false
+    // }, 300);
+    xin = 6
+    console.log('xiayige')
+    
+    const num = randomNum(0, tiku1.length - 1)
+    console.log(num)
     if (this.data.activeIndexList.includes(num)) {
+      busy = false
       this.next()
     } else {
       this.data.activeIndexList.push(num)
@@ -82,9 +88,25 @@ module.exports = {
     this.query('.guanqia').innerText = `${rand}/15`
   },
   created: function () {
+    rand = 1
+    this.query('.guanqia').innerText = `${rand}/15`
     this.next()
+    clearInterval(clock)
+    clock = setInterval(() => {
+      xin--
+      this.jiesuan()
+      if (xin == 2) {
+        owo.tool.toast('答题即将超时!', {"time": 4000})
+      }
+      if (xin <= 0) {
+        xin = 6
+        console.log('下一步')
+        this.next()
+      }
+    }, 2000);
   },
   getTimu: function (key) {
+    this.data.activeIndex = key
     const timu = tiku1[key]
     console.log(timu)
     this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0]
@@ -98,8 +120,12 @@ module.exports = {
       this.query('.text-box-2').classList.add('active')
       this.query('.text-box-1').classList.remove('active')
     }
+    this.jiesuan()
+    if (document.getElementById('toast')) document.getElementById('toast').outerHTML = ''
+    busy = false
   },
   jiesuan: function () {
+    // console.log('jisuan')
     for (let index = 0; index < this.queryAll('.xin').length; index++) {
       const element = this.queryAll('.xin')[index];
       if (index < xin) {
@@ -108,7 +134,6 @@ module.exports = {
         element.classList.add('close')
       }
     }
-    this.query('.code').innerText = `${code}/100`
   }
 }
 </script>
@@ -164,45 +189,6 @@ module.exports = {
   left: 0px;
   top: 0px;
   z-index: -9;
-}
-.xuanxiang {
-  background-image: url('@|3-9.png|');
-  width: 240px;
-  height: 156px;
-  position: absolute;
-  top: 975px;
-  background-repeat: no-repeat;
-  .xuanxiang-show {
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: auto;
-    bottom: -63px;
-    display: none;
-  }
-  .text {
-    line-height: 140px;
-    font-size: 60px;
-    text-align: center;
-    color: #298383;
-    pointer-events: none;
-  }
-}
-.xuanxiang-1 {
-  left: 127px;
-}
-.xuanxiang-2 {
-  left: 400px;
-}
-.xuanxiang.ok .dui {
-  display: block;
-}
-.xuanxiang.error {
-  background-image: url('@|3-10.png|');
-  color: #564f4f;
-  .cuo {
-    display: block;
-  }
 }
 .text-box-1 {
   position: absolute;

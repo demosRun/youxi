@@ -4,15 +4,16 @@
     img.so.so-1(src="@|4-7.png|")
     img.so.so-2(src="@|4-5.png|")
     img.so.so-3(src="@|4-4.png|")
-    img.so.so-4(src="@|4-3.jpg|")
+    img.so.so-4(src="@|2-3.jpg|")
 </template>
 <script>
 module.exports = {
-  created: function () {
+  show: function () {
+    clearInterval(clock)
     owo.animate('bounceInDown', this.query('.so-2'))
     setTimeout(() => {
       owo.go('page7//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-    }, 2000);
+    }, 3000);
   }
 }
 </script>

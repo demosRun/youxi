@@ -5,10 +5,11 @@
     img.so.so-4(src="@|3-8-2.png|")
     img.so.so-5(src="@|3-7.png|")
     img.so.so-8(src="@|3-4-2.png|")
-    img.so.so-9(src="@|3-3.jpg|")
-    .guanqia 1/15
+    img.so.so-9(src="@|2-3.jpg|")
+    .guanqia(font="jijia.ttf")
     //- 时间盒子
-    .xin-box.clear
+    .hide(font="jijia.ttf") 窈窕花蕾瘙痒殷红砧板佣金亲家癖好成绩根茎_然离去怅伥水_不通泄泻萎_不振糜靡相辅相_成承脉_紊乱搏膊说话_巴嗑磕以逸_劳待代食不_腹裹果_年累月长常万古_芳留流一_莫展筹愁按_就班步部相形见_拙绌汩汨姬姫采釆壶壸垚壵妹妺裹裏祇衹塵麈畬畲已巳治冶書畫裹裏
+    .xin-box.clear(font="jijia.ttf")
       .xin
       .xin
       .xin
@@ -21,23 +22,43 @@
       .item.mi
       .item.mi
       .item.kuohao
-    .xuanxiang.xuanxiang-1(o-tap="select1")
+      .item.mi
+    .xuanxiang.xuanxiang-1(o-tap="selectItem(0)")
       img.so.xuanxiang-show.dui(src="@|3-6.png|")
       img.so.xuanxiang-show.cuo(src="@|3-5.png|")
-    .xuanxiang.xuanxiang-2(o-tap="select2")
+      .text
+    .xuanxiang.xuanxiang-2(o-tap="selectItem(1)")
       img.so.xuanxiang-show.dui(src="@|3-6.png|")
       img.so.xuanxiang-show.cuo(src="@|3-5.png|")
+      .text
 </template>
 <script>
 module.exports = {
-  select1: function () {
-    this.$target.classList.add('ok')
+  selectItem: function (ind) {
+    if (busy) return
+    clickMusic.play()
+    const timu = tiku2[this.data.activeIndex]
+    this.query('.kuohao').innerText = timu['pinyin'][timu.right]
+    if (ind == timu.right) {
+      this.$target.classList.add('ok')
+      code += 6
+      this.query('.code').innerText = `${code}/100`
+    } else {
+      this.$target.classList.add('error')
+      xin --
+      this.jiesuan()
+    }
+    this.$el.classList.add('selectd')
+    rand ++
+    if (rand > 10) {
+      setTimeout(() => {
+        owo.go('page5//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
+      }, 2000);
+      return
+    }
     setTimeout(() => {
-      owo.go('page5//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-    }, 1000);
-  },
-  select2: function () {
-    this.$target.classList.add('error')
+      this.next()
+    }, 2000);
   },
   data: {
     activeIndexList: [],
@@ -45,25 +66,14 @@ module.exports = {
     code: 0,
   },
   next: function () {
-    for (let index = 0; index < this.queryAll('.xin').length; index++) {
-      const element = this.queryAll('.xin')[index];
-      if (index < xin) {
-        element.classList.remove('close')
-      } else {
-        element.classList.add('close')
-      }
-    }
-    this.query('.code').innerText = `${code}/100`
-    if (rand > 10) {
-      setTimeout(() => {
-        owo.go('page4//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-      }, 1000);
-      return
-    }
-    rand ++
-    const num = randomNum(0, tiku1.length)
+    if (busy) return
+    busy = true
+    
+    const num = randomNum(0, tiku2.length - 1)
     if (this.data.activeIndexList.includes(num)) {
+      busy = false
       this.next()
+      return
     } else {
       this.data.activeIndexList.push(num)
       this.$el.classList.remove('selectd')
@@ -76,24 +86,73 @@ module.exports = {
     this.query('.guanqia').innerText = `${rand}/15`
   },
   getTimu: function (key) {
-    const timu = tiku1[key]
-    console.log(timu)
+    this.data.activeIndex = key
+    const timu = tiku2[key]
+    const textArr = this.queryAll('.mi-box .item')
+    for (let index = 0; index < timu.text.length; index++) {
+      const element = timu.text[index];
+      console.log(element)
+      if (element == '_') {
+        textArr[index].innerText = ''
+        textArr[index].classList.add('kuohao')
+        textArr[index].classList.remove('mi')
+      } else {
+        textArr[index].innerText = element
+        textArr[index].classList.remove('kuohao')
+        textArr[index].classList.add('mi')
+      }
+    }
     this.query('.xuanxiang-1 .text').innerText = timu['pinyin'][0]
     this.query('.xuanxiang-2 .text').innerText = timu['pinyin'][1]
-    this.query('.text-box-1').innerText = timu['text'][0]
-    this.query('.text-box-2').innerText = timu['text'][1]
-    if (timu.show == 0) {
-      this.query('.text-box-1').classList.add('active')
-      this.query('.text-box-2').classList.remove('active')
-    } else {
-      this.query('.text-box-2').classList.add('active')
-      this.query('.text-box-1').classList.remove('active')
-    }
+    // this.query('.text-box-1').innerText = timu['text'][0]
+    // this.query('.text-box-2').innerText = timu['text'][1]
+    // if (timu.show == 0) {
+    //   this.query('.text-box-1').classList.add('active')
+    //   this.query('.text-box-2').classList.remove('active')
+    // } else {
+    //   this.query('.text-box-2').classList.add('active')
+    //   this.query('.text-box-1').classList.remove('active')
+    // }
+    if (document.getElementById('toast')) document.getElementById('toast').outerHTML = ''
+    xin = 6
+    this.jiesuan()
+    busy = false
   },
   created: function () {
-    rand = 5
+    this.query('.code').innerText = `${code}/100`
+    clearInterval(clock)
+    rand = 6
     this.next()
+    clock = setInterval(() => {
+      xin--
+      this.jiesuan()
+      if (xin == 2) {
+        owo.tool.toast('答题即将超时!')
+      }
+      if (xin <= 0) {
+        xin = 6
+        this.next()
+        return
+      }
+      
+    }, 2000);
   },
+  jiesuan: function () {
+    console.log('jisuan')
+    for (let index = 0; index < this.queryAll('.xin').length; index++) {
+      const element = this.queryAll('.xin')[index];
+      if (index < xin) {
+        element.classList.remove('close')
+      } else {
+        element.classList.add('close')
+      }
+    }
+  },
+  show: function () {
+    this.query('.code').innerText = `${code}/100`
+    rand = 6
+    busy = false
+  }
 }
 </script>
 <style lang="less">
@@ -191,18 +250,26 @@ module.exports = {
   .item {
     background-repeat: no-repeat;
     background-position: center;
+    line-height: 146px;
+    text-align: center;
+    font-size: 74px;
+    color: #167878;
   }
 }
 .mi {
   background-image: url('@|mi.png|');
-  width: 166px;
-  height: 166px;
   margin: 0 10px;
+  width: 119px;
+  height: 146px;
+  margin: 0 10px;
+  background-size: 100%;
+  
 }
 .kuohao {
   background-image: url('@|kuohao.png|');
-  width: 166px;
-  height: 166px;
+  width: 119px;
+  height: 146px;
   margin: 0 10px;
+  background-size: 100%;
 }
 </style>

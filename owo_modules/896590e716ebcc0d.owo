@@ -1,9 +1,9 @@
 <template lang="pug">
 .loading-box
-  img.loading(src="https://cunchu.site/ozzx/resource/loadingLogo.png")
+  img.loading(src="@|loading.png|")
   .loading-bar
     .num-bar
-  span.text Loading
+  span.text 开机中...
   .num 0%
 </template>
 
@@ -11,7 +11,62 @@
   module.exports = {
     data: {
       imgList: [
-        ""
+        "@|2-3.jpg|",
+        "@|14.png|",
+        "@|4-5.png|",
+        "@|5-5.png|",
+        "@|2-7.png|",
+        "@|7.png|",
+        "@|4-4.png|",
+        "@|6-22.png|",
+        "@|2-5.png|",
+        "@|3-4.png|",
+        "@|5-4.png|",
+        "@|3-4-2.png|",
+        "@|6-9.png|",
+        "@|6-7.png|",
+        "@|6-21.png|",
+        "@|6-19.png|",
+        "@|6-24.png|",
+        "@|6-5.png|",
+        "@|15.png|",
+        "@|3-8.png|",
+        "@|3-11.png|",
+        "@|6-23.png|",
+        "@|6-11.png|",
+        "@|6-13.png|",
+        "@|3-10.png|",
+        "@|2-6.png|",
+        "@|16.png|",
+        "@|6-15.png|",
+        "@|3-9.png|",
+        "@|3-8-2.png|",
+        "@|17.png|",
+        "@|23.png|",
+        "@|2-9.png|",
+        "@|3-7.png|",
+        "@|4-7.png|",
+        "@|5-9.png|",
+        "@|6-25.png|",
+        "@|3-5.png|",
+        "@|5-7.png|",
+        "@|3-11-3.png|",
+        "@|6-17.png|",
+        "@|3-6.png|",
+        "@|3-11-2.png|",
+        "@|21.png|",
+        "@|18.png|",
+        "@|4.png|",
+        "@|3-8-3.png|",
+        "@|mi.png|",
+        "@|5.png|",
+        "@|9.png|",
+        "@|11.png|",
+        "@|13.png|",
+        "@|loading.png|",
+        "@|kuohao.png|",
+        "@|xin-active.png|",
+        "@|xin.png|",
       ]
     },
     show: function () {
@@ -84,6 +139,7 @@
   border-radius: 20px;
   padding: 10px;
   box-shadow: 2px 3px 9px #5d739c;
+  display: none;
 }
 .num-bar {
   background-color: #e47d6e;
@@ -94,19 +150,19 @@
 }
 .num, .text {
   position: absolute;
-  top: 0%;
+  top: -5%;
   bottom: -8%;
   margin: auto;
-  line-height: 50px;
-  height: 50px;
+  line-height: 73px;
+  height: 73px;
   font-size: 36px;
   width: 100%;
   text-align: center;
-  color: white;
+  color: #3a8a65;
   font-weight: bold;
 }
 .text {
-  bottom: -14%;
+  bottom: -17%;
 } 
 </style>
  

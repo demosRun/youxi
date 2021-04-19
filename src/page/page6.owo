@@ -3,21 +3,37 @@
   .so.so-0
     img.so.so-1(src="@|6-25.png|")
     img.so.so-2(src="@|6-24.png|" o-animation="shrink" o-tap="owo.script.share.showShare()")
-    img.so.so-3(src="@|6-23.png|" o-tap="window.location.replace('')")
-    img.so.so-4(src="@|6-22.png|")
-    img.so.so-5(src="@|6-21.png|")
-    img.so.so-6(src="@|6-19.png|")
-    img.so.so-7(src="@|6-17.png|")
+    img.so.so-3(src="@|6-23.png|" o-animation="shrink" o-tap="window.location.replace('')")
+    img.so.so-5(src="@|6-21.png|" o-animation="shrink")
+    img.so.so-6.elementToAnimate2(src="@|6-19.png|")
+    img.so.so-7.elementToAnimate3(src="@|6-17.png|")
     img.so.so-8(src="@|6-15.png|")
-    img.so.so-9(src="@|6-13.png|")
-    img.so.so-10(src="@|6-11.png|")
-    img.so.so-11(src="@|6-9.png|")
-    img.so.so-12(src="@|6-7.png|")
-    img.so.so-13(src="@|6-5.png|")
+    img.so.so-9.elementToAnimate5(src="@|6-13.png|")
+    img.so.so-10(src="@|6-11.png|" o-animation="rotate")
+    img.so.so-11.elementToAnimate(src="@|6-9.png|")
+    img.so.so-12.elementToAnimate4(src="@|6-7.png|")
+    img.so.so-13.elementToAnimate6(src="@|6-5.png|")
     img.so.so-14(src="@|6-3.jpg|")
+    .code(font="jijia.ttf") 1234567890分
+    ul.paihang
 </template>
 <script>
 module.exports = {
+  show: function () {
+    clearInterval(clock)
+    this.query('.code').innerText = code + '分'
+    fetch("http://bp.people.com.cn/ydnr_game/index.php/game/paihang")
+      .then(response => response.json())
+      .then(result => {
+        console.log(result)
+        let liData = ''
+        result.forEach(element => {
+          liData += `<li><img src="${element.headurl}"><span class="name">${element.name}</span>-----------<span class="code-item">${element.num}分</span></li>`
+        });
+        this.query('.paihang').innerHTML = liData
+      })
+      .catch(error => console.log('error', error));
+  }
 }
 </script>
 <style lang="less">
@@ -99,5 +115,126 @@ module.exports = {
   left: 0px;
   top: 0px;
   z-index: -14;
+}
+.code {
+  font-size: 110px;
+  position: absolute;
+  left: 0;
+  top: 405px;
+  height: 200px;
+  line-height: 200px;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: #f87d86;
+}
+
+ul {
+  position: absolute;
+  left: 77px;
+  right: 0;
+  margin: auto;
+  top: 703px;
+  width: 392px;
+  li {
+    display: flex;
+    height: 45px;
+    line-height: 45px;
+    align-items: center;
+    font-size: 24px;
+    img {
+      width: 30px;
+      height: 30px;
+      border-radius: 15px;
+      margin-right: 20px;
+    }
+    .name {
+      width: 80px;
+    }
+    .code-item {
+      width: 120px;
+      text-align: left;
+      margin: 0 10px;
+    }
+  }
+}
+
+
+@keyframes yourAnimation{
+    0%{
+        transform: rotate(0deg) scale(1);
+        }
+    50%{
+        transform: rotate(0deg) scale(1.1) translateX(-10px);
+        }
+    100%{
+        transform: rotate(0deg) scale(1) translateX(-0);
+        }
+}
+
+.elementToAnimate{
+    animation: yourAnimation 2s infinite 0s linear;
+}
+
+
+@keyframes yourAnimation2 {
+    0%{
+        transform: rotate(0deg) scale(1) translateX(0);
+        }
+    50%{
+        transform: rotate(0deg) scale(1) translateX(-10px);
+        }
+    100%{
+        transform: rotate(0deg) scale(1) translateX(0);
+        }
+}
+
+.elementToAnimate2 {
+    animation: yourAnimation2 3s infinite 0s linear;
+}
+
+@keyframes yourAnimation3{
+    0%{
+        transform: rotate(0deg);
+        }
+    50%{
+        transform: rotate(2deg) translateX(10px);
+        }
+    100%{
+        transform: rotate(0deg);
+        }
+}
+
+.elementToAnimate3 {
+    animation: yourAnimation3 3s infinite 0s linear;
+}
+
+@keyframes yourAnimation4 {
+    0%{
+        transform: rotate(0deg);
+        }
+    50%{
+        transform: rotate(0) translateX(10px) translateY(10px);
+        }
+    100%{
+        transform: rotate(0deg);
+        }
+}
+
+.elementToAnimate4 {
+    animation: yourAnimation4 3s infinite 0s linear;
+}
+
+@keyframes yourAnimation6{
+    0%{
+        transform: rotate(0deg) translateX(100px);
+        }
+    100%{
+        transform: rotate(0deg) translateX(0);
+        }
+}
+
+.elementToAnimate6{
+    animation: yourAnimation6 5s infinite 0s linear;
 }
 </style>

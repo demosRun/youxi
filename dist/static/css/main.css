@@ -72,7 +72,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
 }
 
 .xin-box .xin.close {
-  background-image: url('../resource/xin.png');
+  background-image: none;
 }
 
 .code {
@@ -88,7 +88,7 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   position: absolute;
   left: 448px;
   top: 321px;
-  line-height: 60px;
+  line-height: 49px;
   width: 163px;
   text-align: center;
   font-size: 30px;
@@ -99,4 +99,50 @@ h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, bu
   user-select: none;
   pointer-events: none;
   animation: none;
+}
+
+.xuanxiang-1 {
+  left: 127px;
+}
+.xuanxiang-2 {
+  left: 400px;
+}
+.xuanxiang.ok .dui, .mi.ok .dui {
+  display: block;
+}
+.xuanxiang.error {
+  background-image: url('../resource/3-10.png');
+  color: #564f4f;
+}
+.xuanxiang.error .cuo, .mi.error .cuo {
+  display: block;
+}
+
+.xuanxiang {
+  background-image: url('../resource/3-9.png');
+  width: 240px;
+  height: 156px;
+  position: absolute;
+  top: 975px;
+  background-repeat: no-repeat;
+}
+
+.xuanxiang .xuanxiang-show, .mi .xuanxiang-show {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  bottom: -63px;
+  display: none;
+}
+.xuanxiang .text {
+  line-height: 140px;
+  font-size: 60px;
+  text-align: center;
+  color: #298383;
+  pointer-events: none;
+}
+
+.hide {
+  display: none;
 }

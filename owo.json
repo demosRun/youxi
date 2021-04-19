@@ -85,6 +85,11 @@
 			"name": "main",
 			"src": "./src/main.js",
 			"resource": true
+		},
+		{
+			"name": "toast",
+			"afterbody": true,
+			"src": "./owo_modules/toast.js"
 		}
 	],
 	"styleList": [
@@ -143,6 +148,11 @@
 		{
 			"name": "share",
 			"src": "https://template.owo.ink/51ca7ab4c38de699.owo",
+			"type": "block"
+		},
+		{
+			"name": "music",
+			"src": "https://template.owo.ink/bc59e31ef893b3fd.owo",
 			"type": "block"
 		}
 	],

@@ -13,7 +13,7 @@ module.exports = {
     owo.animate('bounceInDown', this.query('.so-2'))
     setTimeout(() => {
       owo.go('page3//rotateCubeLeftOut/rotateCubeLeftIn/rotateCubeRightOut/rotateCubeRightIn')
-    }, 2000);
+    }, 3000);
   }
 }
 </script>
